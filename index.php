@@ -7,20 +7,20 @@
 	{
         
 
-            $to_email = "emon77777@gmail.com";
-            $subject = "Simple Email Test via PHP";
-            $body = "Hi,nn This is test email send by PHP Script";
-            $headers = "From: sender\'s email";
+            // $to_email = "emon77777@gmail.com";
+            // $subject = "Simple Email Test via PHP";
+            // $body = "Hi,nn This is test email send by PHP Script";
+            // $headers = "From: sender\'s email";
             
-            if (mail($to_email, $subject, $body, $headers)) {
-                echo "Email successfully sent to $to_email...";
-            } else {
-                echo "Email sending failed...";
-            }
+            // if (mail($to_email, $subject, $body, $headers)) {
+            //     echo "Email successfully sent to $to_email...";
+            // } else {
+            //     echo "Email sending failed...";
+            // }
 
 
 
-        // mail('emon77777@gmail.com', 'Subject Line Here', 'Body of Message Here', 'From: admin@example.com');
+        mail('emon77777@gmail.com', 'Subject Line Here goes', 'this is ypur Body of Message Here', 'From: admin@example.com');
 
         die();
 
