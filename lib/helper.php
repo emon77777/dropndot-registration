@@ -20,13 +20,11 @@
                 if (filter_var($data, FILTER_VALIDATE_EMAIL)) {
                     return $data;
                 } else {
-					echo "<div style='color:red;text-align:center;'><b>Please Input valid $field !</b></div>";
                     return 0;
                 }
 			}
 			else{
 				$data = '';
-				echo "<div style='color:red;text-align:center;'><b>Please Input valid $field !</b></div>";
 				return $data;
 			}
 		}

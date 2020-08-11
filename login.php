@@ -26,7 +26,7 @@
                     Session::set("login", true);
                     Session::set("email", $value['email']);
                     Session::set("userId", $value['id']);
-                    header("Location:dashboard.php");
+                    header("Location:index.php");
                 } else {
                     Session::destroy();
                 }
@@ -70,7 +70,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Login</button>
                             </div>
                             <div class="login-register">
-                                <a href="index.php">Register</a>
+                                <a href="register.php">Register</a>
                             </div>
                         </form>
                     </div>
