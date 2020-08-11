@@ -2,7 +2,10 @@
 
 Class Session{
 	public static function init(){
-		session_start();
+		if(!isset($_SESSION)) 
+		{ 
+			session_start(); 
+		}
 	}
 
 	public static function set($key, $val){
@@ -17,11 +20,18 @@ Class Session{
 		}
 	}
 
-	public static function checksession(){
+	public static function checkSession(){
 		self::init();
 		if(self::get("login")==false){
 			self::destroy();
 			header("Location:login.php");
+		}
+	}
+
+	public static function checkLoggidIn(){
+		self::init();
+		if(self::get("login")==true){
+			header("Location:dashboard.php");
 		}
 	}
 

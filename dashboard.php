@@ -1,5 +1,5 @@
 <?php
-    include '../lib/session.php';
+    include 'lib/session.php';
     Session::checkSession();
 ?>
 
@@ -7,7 +7,14 @@
 
 <nav class="navbar navbar-light bg-light justify-content-between">
     <h3>Kamrul Hasan</h3>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+
+    <?php
+        if (isset($_GET['action']) && $_GET['action']=="logout") {
+            Session::destroy();
+        }
+    ?>
+
+    <a href="?action=logout" class="btn btn-outline-success my-2 my-sm-0">Logout</a>
 </nav>
 
 <div class="container">
