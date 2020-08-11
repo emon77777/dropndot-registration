@@ -40,9 +40,13 @@
                     echo '<br>';
                     echo 'Mailer Error: ' . $mail->ErrorInfo;
                 }
+                else{
+                    echo "<div style='color:green;text-align:center;'><b>Registration Successful. Please check email for activation</b></div>";
+                }
             } catch (Exception $e) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
+                echo "<div style='color:green;text-align:center;'><b>Registration Successful</b></div>";
+                echo "<div style='color:red;text-align:center;'><b>Mail sending failed</b></div>";
+                echo "<div style='color:red;text-align:center;'>Mail Error : <b>{$mail->ErrorInfo}</b></div>";
             }
         }
 
@@ -73,7 +77,6 @@
                     $userInsert=$db->insert($query);
                     if ($userInsert) {
                         sendMail($email, $name);
-                        echo "<div style='color:green;text-align:center;'><b>Registration Successful. Please check email for activation</b></div>";
                     }else{
                         echo "<div style='color:red;text-align:center;'><b>User not inserted !</b></div>";
                     }

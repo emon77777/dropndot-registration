@@ -19,10 +19,8 @@
 
 <div class="container">
     
-        <div class="alert alert-success" role="alert" style="margin-top:10%">
+        <div class="alert alert-success text-center" role="alert" style="margin-top:10%">
             Hello <b>Kamrul Hasan</b>, Welcome to dashboard
-            <span style="float:right"><b>LOGOUT</b></span>
-    
     </div>
 </div>
 <?php include('view/partial/footer.php')?>
